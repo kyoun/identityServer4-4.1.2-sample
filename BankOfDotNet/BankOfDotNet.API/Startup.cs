@@ -33,11 +33,13 @@ namespace BankOfDotNet.API
                 {
                     options.Authority = "http://localhost:5000";
                     options.RequireHttpsMetadata = false;
-                    //options.Audience = "bankOfDotNetApi";
+                    options.Audience = "bankOfDotNet";
+                    /*
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateAudience = false
                     };
+                    */
                 });
 
             services.AddDbContext<BankContext>(opts => opts.UseInMemoryDatabase("BankingDb"));
@@ -53,7 +55,7 @@ namespace BankOfDotNet.API
             }
 
             app.UseRouting();
-
+            
             /*
             app.UseHttpsRedirection();
             */

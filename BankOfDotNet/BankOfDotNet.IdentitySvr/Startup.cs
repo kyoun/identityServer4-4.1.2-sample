@@ -29,8 +29,8 @@ namespace BankOfDotNet.IdentitySvr
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiScopes(Config.GetApiScope())
-                .AddInMemoryClients(Config.GetClients());
-             //.AddInMemoryApiResources(Config.GetAllApiResources());
+                .AddInMemoryClients(Config.GetClients())
+                .AddInMemoryApiResources(Config.GetAllApiResources());
       }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
