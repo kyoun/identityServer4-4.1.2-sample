@@ -33,4 +33,6 @@ after the template is installed, move to the identity server project folder then
 
 ![image](https://user-images.githubusercontent.com/3983653/120103719-53ca0080-c194-11eb-97dd-a6069cb8fb63.png)
 
+this will add UI assets to existing project.
+
 
