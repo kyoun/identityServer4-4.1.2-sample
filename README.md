@@ -36,3 +36,9 @@ after the template is installed, move to the identity server project folder then
 this will add UI assets to existing project.
 
 
+### MVC client to use implicit grant
+
+- To call 'AddOpenIdConnect', following two package need to be added to MVC project
+
+![image](https://user-images.githubusercontent.com/3983653/120105165-22086800-c19b-11eb-9c3e-ece1fc659887.png)
+
