@@ -15,9 +15,14 @@ Login with Google, Face book account - 3, 5
 ### To use Implicit grant, IdentityServer4 template need to be installed
 This will add user interface for user login and forward to the API.
 
-command:
+to install the template, run the command:
 -   dotnet new --install IdentityServer4.Templates
    
 if above doesn't add the template, try with version number:
 
 -  dotnet new --install IdentityServer4.Templates::4.0.1
+
+after the template is installed, move to the identity server project folder then run
+
+- dotnet new is4ui
+
