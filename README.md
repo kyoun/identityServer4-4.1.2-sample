@@ -42,3 +42,4 @@ this will add UI assets to existing project.
 
 ![image](https://user-images.githubusercontent.com/3983653/120105165-22086800-c19b-11eb-9c3e-ece1fc659887.png)
 
+dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect --version 3.0.0
