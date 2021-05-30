@@ -1,5 +1,6 @@
 ﻿using IdentityModel;
 using IdentityServer4.Models;
+using IdentityServer4.Test;
 using System.Collections.Generic;
 
 namespace BankOfDotNet.IdentitySvr
@@ -27,6 +28,15 @@ namespace BankOfDotNet.IdentitySvr
                     ClientSecrets = { new Secret("secret".Sha256()) },
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = { "bankOfDotNetApi" }
+                },
+
+                // resource owner password grant type
+                new Client
+                {
+                    ClientId = "ro.client",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientSecrets = { new Secret("secret".Sha256()) },
+                    AllowedScopes = { "bankOfDotNetApi" }
                 }
             };
         }
@@ -37,6 +47,25 @@ namespace BankOfDotNet.IdentitySvr
             {
                 new ApiScope("bankOfDotNetApi","Customer Api for BankOfDotNet"),
                 new ApiScope("bankOfDotNetAdminApi","Administrator Api for BankOfDotNet")
+            };
+        }
+
+        public static List<TestUser> GetUsers()
+        {
+            return new List<TestUser>
+            {
+                new TestUser
+                {
+                    SubjectId = "1",
+                    Username = "Manish",
+                    Password = "password"
+                },
+                new TestUser
+                {
+                    SubjectId = "2",
+                    Username = "Bob",
+                    Password = "password"
+                }
             };
         }
     }
