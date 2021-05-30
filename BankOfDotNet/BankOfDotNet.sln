@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.IdentitySvr", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.API", "BankOfDotNet.API\BankOfDotNet.API.csproj", "{E5ADAF28-91DC-4A4C-9A00-503B04D75C92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.ConsoleClient", "BankOfDotNet.ConsoleClient\BankOfDotNet.ConsoleClient.csproj", "{8E17F553-3776-46C4-8793-F359C57B7CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankOfDotNet.ConsoleClient", "BankOfDotNet.ConsoleClient\BankOfDotNet.ConsoleClient.csproj", "{8E17F553-3776-46C4-8793-F359C57B7CE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankOfDotNet.MvcClient", "BankOfDotNet.MvcClient\BankOfDotNet.MvcClient.csproj", "{E1843368-F5F6-48B3-AE72-37373D208DEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8E17F553-3776-46C4-8793-F359C57B7CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E17F553-3776-46C4-8793-F359C57B7CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E17F553-3776-46C4-8793-F359C57B7CE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1843368-F5F6-48B3-AE72-37373D208DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1843368-F5F6-48B3-AE72-37373D208DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1843368-F5F6-48B3-AE72-37373D208DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1843368-F5F6-48B3-AE72-37373D208DEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

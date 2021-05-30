@@ -25,13 +25,16 @@ namespace BankOfDotNet.IdentitySvr
       // This method gets called by the runtime. Use this method to add services to the container.
       public void ConfigureServices(IServiceCollection services)
       {
+            services.AddMvc((option) => option.EnableEndpointRouting = false);
+
             //services.AddControllers();
             services.AddIdentityServer()
                 .AddDeveloperSigningCredential()
                 .AddInMemoryApiScopes(Config.GetApiScope())
                 .AddInMemoryClients(Config.GetClients())
                 .AddInMemoryApiResources(Config.GetAllApiResources())
-                .AddTestUsers(Config.GetUsers());
+                .AddTestUsers(Config.GetUsers())
+                .AddInMemoryIdentityResources(Config.GetIdentityResources());
       }
 
       // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,18 +47,16 @@ namespace BankOfDotNet.IdentitySvr
 
          app.UseIdentityServer();
 
-         /*
+         app.UseStaticFiles();
          app.UseHttpsRedirection();
-
          app.UseRouting();
-
-         app.UseAuthorization();
 
          app.UseEndpoints(endpoints =>
          {
-             endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
          });
-         */
       }
    }
 }
