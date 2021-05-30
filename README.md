@@ -16,8 +16,8 @@ Login with Google, Face book account - 3, 5
 This will add user interface for user login and forward to the API.
 
 command:
-   dotnet new --install IdentityServer4.Templates
+-   dotnet new --install IdentityServer4.Templates
    
 if above doesn't add the template, try with version number:
 
-   dotnet new --install IdentityServer4.Templates::4.0.1
+-  dotnet new --install IdentityServer4.Templates::4.0.1
