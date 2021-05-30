@@ -11,3 +11,11 @@
 User Involved - 2, 3, 4, 5
 Machine to machine trusted connection - 1
 Login with Google, Face book account - 3, 5
+
+To use Implicit grant, IdentityServer4 template need to be installed
+command:
+   dotnet new --install IdentityServer4.Templates
+   
+if above doesn't add the template, try with version number:
+
+   dotnet new --install IdentityServer4.Templates::4.0.1
