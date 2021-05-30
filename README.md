@@ -22,7 +22,15 @@ if above doesn't add the template, try with version number:
 
 -  dotnet new --install IdentityServer4.Templates::4.0.1
 
+This will shows the list of the template installed and there will be template for identity server 4
+
+![image](https://user-images.githubusercontent.com/3983653/120103705-41e85d80-c194-11eb-82b9-b807afcb06b8.png)
+
+
 after the template is installed, move to the identity server project folder then run
 
 - dotnet new is4ui
+
+![image](https://user-images.githubusercontent.com/3983653/120103719-53ca0080-c194-11eb-97dd-a6069cb8fb63.png)
+
 
