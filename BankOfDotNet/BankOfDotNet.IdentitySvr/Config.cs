@@ -57,9 +57,9 @@ namespace BankOfDotNet.IdentitySvr
                     ClientId = "mvc",
                     ClientName = "MVC Client",
                     AllowedGrantTypes = GrantTypes.Implicit,
-
-                    RedirectUris = { "http://localhost:5003/sigin-oidc" },
-                    PostLogoutRedirectUris = { "http://localhost:5003/signout-callback-oidc" },
+                    
+                    RedirectUris = { "https://localhost:44317/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:44317/signout-callback-oidc" },
 
                     AllowedScopes = new List<string>
                     {

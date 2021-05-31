@@ -24,8 +24,6 @@ namespace BankOfDotNet.MvcClient
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-
             // turn off jwt type mapping
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
 
@@ -39,11 +37,13 @@ namespace BankOfDotNet.MvcClient
                 .AddOpenIdConnect("oidc", options =>
                 {
                     options.SignInScheme = "Cookies";
-                    options.Authority = "http://localhost:6000";
+                    options.Authority = "https://localhost:5001";
                     options.RequireHttpsMetadata = false;
                     options.ClientId = "mvc";
                     options.SaveTokens = true;
                 });
+
+            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,9 +69,7 @@ namespace BankOfDotNet.MvcClient
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapDefaultControllerRoute().RequireAuthorization();
             });
         }
     }
