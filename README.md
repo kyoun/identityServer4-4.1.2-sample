@@ -11,3 +11,39 @@
 User Involved - 2, 3, 4, 5
 Machine to machine trusted connection - 1
 Login with Google, Face book account - 3, 5
+
+### To use Implicit grant, IdentityServer4 template need to be installed
+This will add user interface for user login and forward to the API.
+
+to install the template, run the command:
+-   dotnet new --install IdentityServer4.Templates
+   
+if above doesn't add the template, try with version number:
+
+-  dotnet new --install IdentityServer4.Templates::4.0.1
+
+This will shows the list of the template installed and there will be template for identity server 4
+
+![image](https://user-images.githubusercontent.com/3983653/120103705-41e85d80-c194-11eb-82b9-b807afcb06b8.png)
+
+
+after the template is installed, move to the identity server project folder then run
+
+- dotnet new is4ui
+
+![image](https://user-images.githubusercontent.com/3983653/120103719-53ca0080-c194-11eb-97dd-a6069cb8fb63.png)
+
+this will add UI assets to existing project.
+
+
+### MVC client to use implicit grant
+
+- To call 'AddOpenIdConnect', following two package need to be added to MVC project
+
+![image](https://user-images.githubusercontent.com/3983653/120105165-22086800-c19b-11eb-9c3e-ece1fc659887.png)
+
+dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect --version 3.0.0
+
+
+### Correlation failed. at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler
+- to solve this error, the MVC client site (even localhost) must using https
